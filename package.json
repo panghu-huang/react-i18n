@@ -1,0 +1,36 @@
+{
+  "name": "@wokeyi/i18n",
+  "version": "1.0.0",
+  "description": "Internationalization for react",
+  "keywords": [
+    "react",
+    "i18n",
+    "Context",
+    "Hooks"
+  ],
+  "files": [
+    "lib",
+    "src"
+  ],
+  "homepage": "https://github.com/wokeyi/react-i18n",
+  "main": "./lib/react-i18n.js",
+  "typings": "./src/index.tsx",
+  "repository": "https://github.com/wokeyi/react-i18n.git",
+  "author": "wokeyi",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@types/react": ">=16.8.0",
+    "rollup": "^1.6.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-plugin-uglify": "^6.0.2",
+    "tslib": "^1.9.3",
+    "typescript": "^3.3.3333"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
+}
