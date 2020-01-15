@@ -14,6 +14,10 @@ export interface LocaleContextType<T> {
   toggleLocale: React.Dispatch<React.SetStateAction<keyof T>>
 }
 
+export interface LocaleProviderProps<T> {
+  initialLocale: keyof T
+}
+
 export function create<T extends Messages>(
   messages: T, 
   initialLocale: keyof T, 
@@ -42,8 +46,8 @@ export function create<T extends Messages>(
     return React.useContext(LocaleContext).toggleLocale
   }
 
-  const LocaleProvider: React.FC = props => {
-    const [locale, setLocale] = React.useState(initialLocale)
+  const LocaleProvider: React.FC<LocaleProviderProps<T>> = props => {
+    const [locale, setLocale] = React.useState(props.initialLocale)
 
     const toggleLocale = React.useCallback((locale: keyof T) => {
       onToggleLocale && onToggleLocale(locale)
